@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 500px;
+            height: 0; 
+            /* 0으로 설정되어 요소가 overflow 상태가 되버려 인식 불가할 수 있음, 금지 */
+            margin: 0 auto;
+            margin-top: 50px;
+            /* 여백은 margin으로 주는게 좋다. */
+            text-align: center; 
+            /* 내부의 text가 모두 정렬이 된다는 점을 염두에 두고 사용, 단독 정렬 시 해당 태그에 직접 걸기 */
+        }
+
+        .red-box {
+            width: 50%;
+            height: 100px;
+            background-color: red;
+            float: left;
+            
+        }
+
+        .green-box {
+            width: 50%;
+            height: 100px;
+            background-color: green;
+            float:left ;
+        } 
+
+        .blue-box {
+            width: 100%;
+            height: 200px;
+            background-color: blue;
+            /*  <p> 태그로 인해 정상적으로 나왔지만 <p>가 없으면 아래로 들어가므로 같이 float를 걸어줘야한다. */
+        }
+
+        .contanier::after{
+            clear: both;
+            content: "";
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        
+        <div class="red-box"></div>
+        <div class="green-box"></div>
+        <p>글자가운데정렬</p>
+        <div class="blue-box"></div>
+    </div>
+</body>
+</html>
