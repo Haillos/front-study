@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            position: relative;
+
+            animation-fill-mode: both;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+        }
+
+        .stop {
+            background-color: lightgray;
+            display: inline-block;
+            font-size: small;
+        }
+
+        .first {
+            animation-name: ani-1st;
+            animation-duration: 2.5s;
+            animation-delay: 1s;
+        }
+        .second {
+            animation-name: ani-2nd;
+            animation-duration: 3s;
+            animation-delay: 1s;
+        }
+        .third {
+            animation-name: ani-3rd;
+            animation-duration: 3.5s;
+            animation-delay: 1s;
+        }
+
+        .first:hover, .second:hover, .third:hover {
+            animation-play-state: paused;
+        }
+
+        .stop:hover ~.box {
+            animation-play-state: paused;
+        }
+
+        @keyframes ani-1st {
+            0% {
+                background-color: blue;
+                left: 0px;
+            }
+            50% {
+                background-color: orange;
+                left :200px;
+            }
+            100% {
+                background-color: pink;
+                left: 400px;
+            }
+        }
+
+        @keyframes ani-2nd {
+            0% {
+                background-color: blue;
+            }
+            50% {
+                background-color: orange;
+                translate: 0px 100px;
+            }
+            100% {
+                background-color: pink;
+                translate: 0px 200px;
+            }
+        }
+
+        @keyframes ani-3rd {
+            0% {
+                background-color: blue;
+            }
+            50% {
+                background-color: orange;
+                translate: 100px 200px;
+            }
+            100% {
+                background-color: pink;
+                translate: 200px 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="stop"></div>
+    <div class="first box"></div>
+    <div class="second box"></div>
+    <div class="third box"></div>
+    
+</body>
+
+</html>
