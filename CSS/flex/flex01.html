@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        .container {
+            background-color: lightgray;
+            height: 400px;
+            display: flex;
+            /* flex-direction: row; */
+            /* flex-wrap: wrap-reverse; */
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center; /* 각각 정렬 */
+            align-content: center; /* item이 두 줄 이상일 때 교차축 기준 정렬 */
+        }
+
+        .item {
+            display: flex;
+            flex-flow: wrap;
+            align-items: center; /* item 교차축 정렬 */
+            justify-content: center; /* item 주축 정렬 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    
+</body>
+</html>
