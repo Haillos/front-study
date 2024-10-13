@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background-color: lightblue;
+            height: 1830px;
+            margin: auto;
+        }
+
+        body {
+            width: 1227px;
+            margin: auto;
+        }
+        .top-bar-ul {
+            background-color: lightgray;
+            height: 39px;
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: small;
+        }
+
+        .header-bar {
+            width: 1088px;
+            height: 398px;
+            margin: auto;
+        }
+
+        .hb-wrap {
+            background-color: white;
+        }
+
+        .header-bar-ul {
+            width: 960px;
+            height: 80px;
+            background-color: white;
+            margin: auto;
+            list-style-type: none;
+            display: flex;
+            flex-direction: row;
+            font-size: small;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .header-bar-ul:hover~.hb-bottom {
+            display: block;
+        }
+        .hb-bottom:hover {
+            display: block;
+        }
+
+        .hb-bottom {
+            height: 318px;
+            display: none;
+        }
+        .main {
+            background-color: lightgreen;
+            width: 100%;
+        }
+        .panel-2 {
+            background-color: lightcoral;
+            height: 408px;
+            width: 1000px;
+            margin: auto;
+        }
+        .panel-3 {
+            background-color: lightcyan;
+            height: 450px;
+        }
+        .panel-4 {
+            background-color: lightgoldenrodyellow;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            gap: 5px;
+        }
+        .b4 {
+            width:240px ;
+            height: 420px;
+            background-color: white;
+            border: 5px solid black;
+            
+        }
+
+        .footer {
+            background-color: lightsalmon;
+            height: 190px;
+            width: 1227px;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <main>
+        <div class="header">
+            <div class="top-bar">
+                <ul class="top-bar-ul">
+                    <li class="top-bar1">롯데월드 어드벤처</li>
+                    <li class="top-bar2">롯데월드 어드벤처 부산</li>
+                    <li class="top-bar3">SEOUL SKY</li>
+                    <li class="top-bar4">롯데워터파크</li>
+                    <li class="top-bar5">롯데월드 아쿠아리움 하노이</li>
+                </ul> <!-- <select class="lang">
+                    <option>한국어</option>
+                    <option>English</option>
+                </select> -->
+            </div>
+            <div class="header-bar">
+                <div class="hb-wrap">
+                    <ul class="header-bar-ul">
+                        <li class="h1">
+                            <div class="bar-list"><span>아쿠아리움 소개</span></div>
+                        </li>
+                        <li class="h2">
+                            <div class="bar-list"><span>프로그램 · 이벤트</span></div>
+                        </li>
+                        <li class="h3">
+                            <div class="bar-list"><span>이용안내</span></div>
+                        </li>
+                        <li class="h4">
+                            <div class="bar-list"><span>온라인예매</span></div>
+                        </li>
+                        <li class="h5">
+                            <div class="bar-list"><span>단체 안내</span></div>
+                        </li>
+                        <li class="h6">
+                            <div class="bar-list"><span>고객소리함</span></div>
+                        </li>
+                    </ul>
+                    <div class="hb-bottom"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="main">
+            <div class="panel-1">
+                <ul class="lotate-img"><a class="lotate-link" href=""></a></ul>
+                <ul class="lotate-img"><a class="lotate-link" href=""></a></ul>
+                <ul class="lotate-img"><a class="lotate-link" href=""></a></ul>
+                <ul class="lotate-img"><a class="lotate-link" href=""></a></ul>
+                <ul class="lotate-img"><a class="lotate-link" href=""></a></ul>
+                <ul class="lotate-img"><a class="lotate-link" href=""></a></ul>
+                <div class="controlbar"></div>
+            </div>
+            <div class="panel-2">
+                <div class="box-2">
+                    <div class="information">
+                    </div>
+                    <div class="program">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main2">
+            <div class="panel-3">
+                <h2>PANEL</h2>
+            </div>
+            <div class="panel-4">
+                    <div class="b4"></div>
+                    <div class="b4"></div>
+                    <div class="b4"></div>
+                    <div class="b4"></div>
+            </div>
+            <div class="footer">
+                <div class="footer-box">
+                    <div class="footer-icon"></div>
+                    <div class="footer-text"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
