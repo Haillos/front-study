@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>글자</p>
+    </div>
+
+    <div class="container">
+        <div class="box a" id="box-a-id">a</div>
+        <div class="box b">b</div>
+        <div class="box c">c</div>
+    </div>
+
+    <p id="target">text<span style="display: none;">hidden</span></p>
+
+    <script>
+        let cup = '콜라'; // → let (바뀔 수 있는) 
+        cup = '맥주'
+        cup = '오뎅국물'
+
+        const boxA = document.getElementById('box-a-id'); // → const (지정 후 바뀌지 않는) 암묵적으로 많이 사용
+        //document.getElementById('#box-a-id'); X
+
+        console.log(boxA);
+
+        document.getElementsByClassName('box');
+
+        document.querySelector('#box-a-id');
+        document.querySelectorAll('.box');
+        // /document.querySelectorAll('box'); X
+        // 사용 편의성을 위해 변수 지정 → let, const
+
+        const div_target = document.getElementById('target');
+        console.log(div_target.textContent);
+        console.log(div_target.innerText);
+        console.log(div_target.innerHTML);
+
+        document.getElementById('target').textContent = 'textContent 작성'; // 모든 텍스트
+        document.getElementById('target').innerText = 'textContent 작성'; // 화면상에만 보이는 텍스트
+        document.getElementById('target').innerHTML = 'textContent 작성'; // HTML을 포함한 텍스트
+
+        div_target.style.color = '#ab93f6' //div_target 컬러 적용
+
+        document.querySelector('#box-a-id').classList.add('bg-red')
+
+        
+
+    </script>
+</body>
+
+</html>
