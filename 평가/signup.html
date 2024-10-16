@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .screen {
+            width: 500px;
+            height: 500px;
+            background-color: rgb(21, 109, 94);
+            margin: 0 auto;
+            margin-top: 200px;
+        }
+
+        .topbar {
+            width: 100%;
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bar {
+            width: 80%;
+            height: 40%;
+            display: flex;
+            
+        }
+        .signup {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(11, 182, 125) ;
+        }
+        .login {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: gray;
+        }
+        a {
+            text-decoration: none;
+        }
+
+
+        .text {
+            text-align: center;
+        }
+
+
+        .middle {
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .in {
+            border: 1px solid gray;
+            background-color: rgb(21, 109, 94);
+            color: lightgray;
+            width: 80%;
+            height: 15%;
+        }
+
+
+        .bottom {
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .Start {
+            background-color: rgb(11, 182, 125);
+            width: 80%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: x-large;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="screen">
+        <div class="topbar">
+            <div class="bar">
+                    <a href="signup.html" class="signup">Sign Up</a>
+                    <a href="login.html" class="login">Login</a>
+            </div>
+        </div>
+        <h1 class="text" style="color: white;">Sign Up for Free</h1>
+
+        <div class="middle">
+            <input class="email in" type="Email" value="Email  Address"></input><br>
+            <input class="password in" type="password" value="Set A Password"></input><br>
+            <input class="confirmpw in" type="password" value="Confirm A Password"></input><br>
+        </div>
+
+        <div class="bottom">
+            <div class="Start" type="">GET STARTED</div>
+        </div>
+    </div>
+</body>
+
+</html>
