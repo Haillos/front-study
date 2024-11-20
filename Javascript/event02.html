@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <p id ="pid">texttexttext</p>
+
+    <a id="aid" href="https://naver.com">네이버로 링크</a>
+
+    <div id="container">
+
+    </div>
+</body>
+<script>
+    document.getElementById('pid').classList.add('red'); // 클래스 추가
+    document.getElementById('pid').classList.remove('red'); // 클래스 삭제
+    document.getElementById('pid').classList.toggle('red'); // 클래스 반복
+
+    
+    const aEle = document.querySelector('#aid');
+    console.log(aEle.getAttribute('href'));
+    aEle.setAttribute('href', 'https:netflix.com');
+    aEle.setAttribute('target', '_black');
+
+    //aEle color red
+    aEle.style.color = 'red';
+    aEle.classList.add('red'); //class = '값' + red class = '값 red'
+    aEle.setAttribute('class', 'red'); // class='red' class='값' => class ='red'
+
+    aEle.removeAttribute('target');
+
+    const divCon = document.getElementById('container');
+
+    const newEle = document.createElement("p"); // <p>
+    const txtEle = document.createTextNode("p태그안에 text"); //텍스트
+    const attEle = document.createAttribute("class"); // class 속성
+    attEle.value = "blue" //class 속성값
+
+    divCon.appendChild(newEle);// div -> p 추가
+    newEle.appendChild(txtEle); // p -> 텍스트
+    newEle.setAttributeNode(attEle); // p > 속성추가
+
+    document.getElementById('target').innerHTML = "<strong>p target text</strong>";
+// →
+    //createElement("strong")
+    //createTextNode("p target text")
+    //ele.appendChild(text);
+    //target.appendChild(ele)
+
+//노드 삭제
+//부모노드.removeChild(자식노드)
+
+//document.getElementById('target').removeChild(document.querySelector('strong'));
+//document.getElementById('target').removeChild(document.getElementById('target').firstChild);
+//document.querySelector('strong')
+</script>
+</html>
