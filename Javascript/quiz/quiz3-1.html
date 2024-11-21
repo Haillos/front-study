@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<style>
+.back-gray {
+    background-color: gray;
+}
+.font-red {
+    color: red;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div id="main">
+<p id="p1">p1 텍스트</p>
+<p id="p2">p2 텍스트</p>
+</div>
+</div>
+<button onclick="changeMain1()">main 배경색 gray로 변경</button>
+<button onclick="changeMain2()">main 배경색 white로 변경</button>
+<button onclick="changeP1()">p1 글자색 red로 변경</button>
+<button onclick="changeP11()">p1 글자색 black로 변경</button>
+<button onclick="changeP2()">"p2 텍스트"를 "p2 글자" 로 변경</button>
+
+
+<script>
+function changeMain1(){
+    document.getElementById('main').classList.add('back-gray');
+};
+function changeMain2(){
+    document.getElementById('main').classList.remove('back-gray');
+};
+function changeP1(){
+    document.getElementById('p1').style.color = 'red';
+    //document.getElementById('p1').setAttribute('class', 'font-red')
+}
+function changeP11(){
+    document.getElementById('p1').style.color = 'black';
+    //document.getElementById('p1').setAttribute('class', 'font-red')
+}
+function changeP2(){
+    //document.getElementById('p2').innerHTML = 'p2 글자'
+    document.getElementById('p2').textContent = 'p2 글자'
+}
+
+
+</script>
+</body>
+</html>

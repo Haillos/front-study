@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="frm_login">
+        <input type="text" id="loginId" placeholder="아이디"><br>
+        <input type="password" id="loginPw" placeholder="비밀번호"><br>
+        <button id="btnLogin" onclick="tryLogin()">로그인 시도</button><br>
+    </form>
+
+    <script>
+        //코드작성 
+        const input_id = document.getElementById('loginId');
+        const input_pw = document.getElementById('loginPw');
+        const btn_login = document.getElementById('btnLogin');
+        const frm_login = document.getElementById('frm_login');
+
+        function tryLogin() {
+            input_id.value = '';
+            input_pw.value = '';
+        };
+
+        input_id.addEventListener('keydown', (event) => {
+            if (event.keyCode == 13) {
+                event.preventDefault();
+                input_pw.focus();
+            }
+        });
+
+        input_pw.addEventListener('keydown', (event) => {
+            
+            if (event.keyCode == 13) {
+                event.preventDefault();
+
+                //1)
+                //input_id.value = '';
+                //input_pw.value = '';
+
+                //2) 동일한 함수호출
+                //tryLogin();
+
+                //3) 로그인 버튼을 눌러버리기
+                //btnLogin.click();
+                //btnLogin.focus(); // 로그인 버튼으로 시점이 옮기며 눌린 효과
+            }
+        })
+
+        frm_login.addEventListener("submit", (event)=>{
+            console.log('awfawf');
+            event.preventDefault();
+            if(input_id ==''){
+            alert("아이디 입력해주세요");
+            input_id.focus();
+            return;
+        }
+
+        if(input_pw ==''){
+            alert("비밀번호 입력해주세요");
+            input_pw.focus();
+            return;
+        }
+
+
+            tryLogin();
+        })
+
+        //tryLogin();
+        //유효성 검증
+
+        //비어있는 입력값이 있다면 입력하라는 메시지 띄우며 이동
+
+        if(input_id ==''){
+            alert("아이디 입력해주세요");
+            input_id.value = '';
+            input_id.focus();
+            return;
+        }
+
+        if(input_pw ==''){
+            alert("비밀번호 입력해주세요");
+            input_pw.value = '';
+            input_pw.focus();
+            return;
+        }
+
+        
+        //1 
+        /*
+    function tryLogin() {
+        document.getElementById('btnLogin').addEventListener('submit', tryLogin)
+    };*/
+
+        //2
+        /*
+        document.getElementById('loginId').addEventListener('keydown',(event)=>{
+            event.preventDefault();
+    
+            console.log(event.keycode);
+            if(event.keycode == 13){
+                document.getElementById('next').focus();
+            }
+            });
+    
+            //3 
+        document.getElementById('loginId').addEventListener('keydown',(event)=>{
+            event.preventDefault();
+    
+        console.log(event.keycode);
+    
+        if(event.keycode == 13){
+            document.getElementById('next').focus();
+        }
+        });
+        */
+
+    </script>
+</body>
+
+</html>

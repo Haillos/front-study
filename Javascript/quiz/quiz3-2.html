@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<style>
+.back-gray {
+    background-color: gray;
+}
+.font-red {
+    color: red;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div id="main">
+<p id="p1">p1 텍스트</p>
+<p id="p2">p2 텍스트</p>
+</div>
+</div>
+<button onclick="changeMain1()">main 배경색 gray로 변경</button>
+<button onclick="changeP1()">p1 글자색 red로 변경</button>
+<button onclick="changeP2()">"p2 텍스트"를 "p2 글자" 로 변경</button>
+
+
+<script>
+function changeMain1(){
+    document.getElementById('main').classList.toggle('back-gray');
+};
+//document.getElementById('main').classList.contains() //클래스에 포함하고 있는지 
+function changeP1(){
+    document.getElementById('p1').classList.toggle('font-red');
+}
+let idx=0;
+function changeP2(){
+    const p2 = document.querySelector('#p2');
+    
+    const textArr = ['p2 텍스트', 'p2 하나', 'p2 둘', 'p2 셋', 'p2 넷'];
+    idx++;
+    if(idx == textArr.length){
+        idx==0;
+    }
+    p2.textContent = textArr[idx]; 
+}
+    /*
+    if(p2.textContent == 'p2 텍스트'){
+        document.querySelector('#p2').textContent = 'p2 하나'
+    }else if(p2.textContent == 'p2 하나'){
+        document.querySelector('#p2').textContent = 'p2 둘'
+    }else if(p2.textContent == 'p2 둘'){
+        document.querySelector('#p2').textContent = 'p2 셋'
+    }else if(p2.textContent == 'p2 셋'){
+        document.querySelector('#p2').textContent = 'p2 넷'
+    }else if(p2.textContent == 'p2 넷'){
+        document.querySelector('#p2').textContent = 'p2 텍스트'
+    }
+}*/
+
+
+</script>
+</body>
+</html>
